@@ -62,6 +62,11 @@
             </svg>
           </a>
         </div>
+        <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__service-name">
+          DVSA Webchat
+        </a>
+        </div>
       </div>
     </header>
     <div class="govuk-width-container">
@@ -70,7 +75,19 @@
           <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-xl">Enter your Details</h1>
 
-            <form action="https://www.timeforstorm.com/IM/endpoint/client/5709/DVSA%20Webchat/8fcee31aba6d316d81f72f7935d681b97b3738fc69ae34d38101ae6b2f2282ef" method="get" novalidate class="gouk-form">
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                    Data stored during web chat sessions will not be shared with third parties.
+              </strong>
+            </div>
+            <form
+              action="https://www.timeforstorm.com/IM/endpoint/client/5709/DVSA%20Webchat/8fcee31aba6d316d81f72f7935d681b97b3738fc69ae34d38101ae6b2f2282ef"
+              method="get"
+              novalidate
+              class="gouk-form"
+            >
               <fieldset class="govuk-fieldset">
                 <legend
                   class="govuk-fieldset__legend govuk-fieldset__legend--l"
@@ -116,9 +133,8 @@
 
                 <input type="hidden" name="im_emailTemplate" value="3988" />
                 <input type="hidden" name="im_subject" value="DVSA" />
-
               </fieldset>
-              <button type="submit" class="govuk-button" data-module="govuk-button">Save and continue</button>
+              <button type="submit" class="govuk-button" data-module="govuk-button"> Save and continue</button>
             </form>
           </div>
         </div>
@@ -163,7 +179,7 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/javascripts/govuk-frontend.min.js"></script>
+    <script type="module" src="/javascripts/govuk-frontend-5.2.0.min.js"></script>
     <script type="module">
       import { initAll } from "/javascripts/govuk-frontend-5.2.0.min.js";
       initAll();
