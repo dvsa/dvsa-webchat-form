@@ -102,6 +102,8 @@
                     name="im_name"
                     type="text"
                     autocomplete="full-name"
+                    required 
+                    pattern="^([a-zA-z,/.-]+)\s([a-zA-z,/.-]+)$"
                   />
                 </div>
                 <div class="govuk-form-group">
@@ -120,7 +122,6 @@
                 </div>
 
                 <input type="hidden" name="im_emailTemplate" value="3988" />
-                <input type="hidden" name="im_subject" value="DVSA" />
               </fieldset>
               <button type="submit" class="govuk-button" data-module="govuk-button"> Save and continue</button>
             </form>
