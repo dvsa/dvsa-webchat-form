@@ -73,12 +73,12 @@
       <main class="govuk-main-wrapper" id="main-content" role="main">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl">Enter your Details</h1>
+            <h1 class="govuk-heading-xl" data-cy="Rhowch eich manylion">Enter your Details</h1>
 
             <div class="govuk-warning-text">
               <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text">
-                <span class="govuk-visually-hidden">Warning</span>
+              <strong class="govuk-warning-text__text" data-cy="Ni fydd data sy'n cael ei storio yn ystod sesiynau sgwrsio ar-lein yn cael ei rannu â thrydydd partïon.">
+                <span class="govuk-visually-hidden" data-cy="Rhybudd">Warning</span>
                     Data stored during web chat sessions will not be shared with third parties.
               </strong>
             </div>
@@ -93,7 +93,7 @@
                   class="govuk-fieldset__legend govuk-fieldset__legend--l"
                 ></legend>
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="first-name">
+                  <label class="govuk-label" for="first-name" data-cy="Enw Cyntaf">
                     First Name:
                   </label>
                   <input
@@ -105,7 +105,7 @@
                   />
                 </div>
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="last-name">
+                  <label class="govuk-label" for="last-name" data-cy="Enw olaf">
                     Last Name:
                   </label>
                   <input
@@ -116,8 +116,8 @@
                     autocomplete="last-name"
                   />
                 </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="email-address">
+                <div class="govuk-form-group">""
+                  <label class="govuk-label" for="email-address" data-cy="Cyfeiriad E-bost">
                     Email Address:
                   </label>
                   <input
@@ -158,21 +158,21 @@
                 d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
               />
             </svg>
-            <span class="govuk-footer__licence-description">
+            <span class="govuk-footer__licence-description" data-cy="Mae'r holl gynnwys ar gael o dan y">
               All content is available under the
               <a
                 class="govuk-footer__link"
                 href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
                 rel="license"
-                >Open Government Licence v3.0</a
-              >, except where otherwise stated
+                data-cy="Trwydded Llywodraeth Agored v3.0">Open Government Licence v3.0</a
+              >, <span data-cy="ac eithrio lle nodir yn wahanol">except where otherwise stated</span>
             </span>
           </div>
           <div class="govuk-footer__meta-item">
             <a
               class="govuk-footer__link govuk-footer__copyright-logo"
               href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
-            >
+             data-cy="© Hawlfraint y Goron" >
               © Crown copyright
             </a>
           </div>
