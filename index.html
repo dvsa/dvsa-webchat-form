@@ -68,9 +68,6 @@
           </a>
         </div>
         <div class="govuk-header__content">
-        <a href="#" class="govuk-header__link govuk-header__service-name">
-          DVSA Webchat
-        </a>
         </div>
       </div>
     </header>
@@ -78,56 +75,42 @@
       <main class="govuk-main-wrapper" id="main-content" role="main">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-xl" data-cy="Rhowch eich manylion">Enter your Details</h1>
+            <h1 class="govuk-heading-xl" data-cy="Chat web de DVSA">DVSA Webchat</h1>
 
-            <div class="govuk-warning-text">
-              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-              <strong class="govuk-warning-text__text" data-cy="Ni fydd data sy'n cael ei storio yn ystod sesiynau sgwrsio ar-lein yn cael ei rannu â thrydydd partïon.">
-                <span class="govuk-visually-hidden" data-cy="Rhybudd">Warning</span>
-                    Data stored during web chat sessions will not be shared with third parties.
-              </strong>
+            <h2 class="govuk-heading-l" data-cy="Oriau agor Webchat" >Webchat opening Hours</h2>
+
+            <p class="govuk-body" data-cy="dydd i ddydd Gwener, 8am i 4pm. 
+               penwythnosau a gwyliau banc. Caeedig.">
+               Monday to Friday, 8am to 4pm. <br />
+               Weekends and bank holidays. Closed.
+            </p>
+
+            <h2 class="govuk-heading-l" data-cy="Cyn i chi ddechrau" >Before you start</h2>
+            <p class="govuk-body" data-cy="Gallwch arbed copi o'ch sgwrs trwy ddewis 'Ydw' i'r daith ar ddiwedd y sgwrs.">
+              You can save a copy of your chat by selecting 'Yes' to the transciption at the end of the chat.
+              </p>
+            <p class="govuk-body" data-cy="Ni allwch ddefnyddio webchat i wneud taliadau i DVSA.">
+              You cannot use webchat to make payments to DVSA.
+            </p>
+          
+            <p class="govuk-body">
+                <a href="form.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+              Start now
+              <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+              </svg>
+            </a>
+            </p>
+            <h2 class="govuk-heading-l" data-cy="Ffyrdd eraill o gael help">Other ways to get help</h2>
+
+            <div class="contact govuk-inset-text">
+              <p class="govuk-body"><span data-cy="Ymholiadau profion gyrru DVSA">DVSA driving test enquiries</span><br>
+              <a href="mailto:customerservices@dvsa.gov.uk">customerservices@dvsa.gov.uk</a><br>
+              Telephone: 0300 200 1122<br>
+              Monday to Friday, 8am to 4pm<br>
+              <a href="https://www.gov.uk/call-charges" data-cy="Darganfyddwch fwy am dâl galwadau">Find out about call charges</a></p>
             </div>
-            <form
-              action="https://www.timeforstorm.com/IM/endpoint/webchat2/5709/DVSA%20Webchat/bd6de6a33eccfdccb3b722a450b5d735c1fd357ff323ff63c95b8f2a715dd27a"
-              method="get"
-              novalidate
-              class="gouk-form"
-            >
-              <fieldset class="govuk-fieldset">
-                <legend
-                  class="govuk-fieldset__legend govuk-fieldset__legend--l"
-                ></legend>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="full-name" data-cy="Enw llawn">
-                    Full Name:
-                  </label>
-                  <input
-                    class="govuk-input"
-                    id="full-name"
-                    name="im_name"
-                    type="text"
-                    autocomplete="full name"
-                  />
-                </div>
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="email-address" data-cy="Cyfeiriad E-bost">
-                    Email Address:
-                  </label>
-                  <input
-                    class="govuk-input"
-                    id="email-address"
-                    name="im_email"
-                    type="email"
-                    autocomplete="email address"
-                    required
-                    pattern=".+@example\.com"
-                  />
-                </div>
 
-                <input type="hidden" name="im_emailTemplate" value="3988" />
-              </fieldset>
-              <button type="submit" class="govuk-button" data-module="govuk-button" data-cy="Cadw a pharhau"> Save and continue</button>
-            </form>
           </div>
         </div>
       </main>
