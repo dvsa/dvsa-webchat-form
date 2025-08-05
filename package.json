@@ -1,0 +1,25 @@
+{
+  "name": "dvsa-webchat",
+  "version": "1.0.0",
+  "description": "DVSA Webchat Service",
+  "scripts": {
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "prebuild": "npm run clean",
+    "postbuild": "npm run list-built-files",
+    "list-built-files": "find _site -type f -print0 | xargs -0 ls -lh | awk '{printf \"%-6s %s\\n\", $5, $9}'",
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "engineStrict": true,
+  "author": "Driver and Vehicle Standards Agency",
+  "license": "Open Government Licence v3.0",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "govuk-frontend": "^5.11.0",
+    "nunjucks": "^3.2.4"
+  }
+}
