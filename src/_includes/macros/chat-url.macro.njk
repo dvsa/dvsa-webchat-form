@@ -1,7 +1,7 @@
 {% macro chatUrl(page, currentLang, urls) %}
     {# Macro to compute the chat URL #}
     {% set formAction = page.url | replace('/' + currentLang + '/', '') | replace('/', '') %}
-    {% set chatUrl = urls[formAction].url %}
-
-    {{ chatUrl | default('#') }}
+    {% set chatKey = urls[formAction].url %}
+    
+    {{ chatKey | default('#') }}
 {% endmacro %}

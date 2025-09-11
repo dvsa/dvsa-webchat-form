@@ -1,6 +1,6 @@
 {% from "macros/chat-url.macro.njk" import chatUrl %}
 <div class="govuk-width-container">
-  <form action={{ chatUrl(page, currentLang, urls) }} method="GET" class="govuk-form">
+  <form action="{{ chatUrl(page, currentLang, urls) }}" method="GET" class="govuk-form">
     <main class="govuk-main-wrapper" id="main-content" role="main">
       {% call govukFieldset({ legend: { text: t.chatHeading, classes:
       "govuk-fieldset__legend--l", isPageHeading: true } }) %}
