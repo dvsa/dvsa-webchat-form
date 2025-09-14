@@ -12,16 +12,22 @@
       </div>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          {{ govukInput({ label: { text: t.fullName }, id: "full-name", name:
-          "name", autocomplete: "name", spellcheck: false }) }}
+          {{ govukInput({ label: { text: t.firstName }, id: "firstname", name:
+          "firstname", autocomplete: "name", spellcheck: false }) }}
         </div>
       </div>
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-          {{ govukInput({ label: { text: t.email }, hint: { text: t.emailHint }, id: "email", name: "im_email",
+          {{ govukInput({ label: { text: t.lastName }, id: "lastname", name:
+          "lastname", autocomplete: "name", spellcheck: false }) }}
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukInput({ label: { text: t.email }, hint: { text: t.emailHint }, id: "email", name: "im_subject",
           type: "email", autocomplete: "email", spellcheck: false }) }}
         </div>
-         {{ govukInput({ id: "template", name: "im_emailTemplate", value : "3988" ,
+         {{ govukInput({ id: "template", name: "email", value : "3988" ,
           type: "hidden" }) }}
       </div>
       <div class="govuk-grid-row">

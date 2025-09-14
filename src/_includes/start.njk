@@ -1,0 +1,21 @@
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">{{t.mainHeading}}</h1>
+        <h2 class="govuk-heading-l">{{t.openingHoursHeading}}</h2>
+        <p class="govuk-body">{{t.openingHoursText | safe }}</p>
+        <h2 class="govuk-heading-l">{{t.beforeYouStartHeading}}</h2>
+        <p class="govuk-body">{{t.beforeYouStartText | safe }}</p>
+        <p class="govuk-body">{{t.paymentText }}</p>
+        <p class="govuk-body">
+          {{ govukButton({ text: t.start, href:"../../" + currentLang + "/" + context , isStartButton: true })
+          }}
+        </p>
+        <p class="govuk-body">
+          {{ govukInsetText({ text: t.insetText | safe }) }}
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
