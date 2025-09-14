@@ -1,0 +1,108 @@
+{% from "govuk/macros/attributes.njk" import govukAttributes -%}
+{% from "govuk/components/skip-link/macro.njk" import govukSkipLink -%}
+{% from "govuk/components/header/macro.njk" import govukHeader -%}
+{% from "govuk/components/footer/macro.njk" import govukFooter -%}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation -%}
+{% from "macros/language-toggle-url.macro.njk" import languageToggleUrl %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+ {%- from "govuk/components/button/macro.njk" import govukButton -%} 
+{%- from "govuk/components/input/macro.njk" import govukInput -%}
+{%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+{%- set _rebrand = govukRebrand() if govukRebrand is callable else govukRebrand -%}
+{%- set currentLang = lang or "en" -%}
+{%- set t = translations[currentLang] -%}
+
+{# Hardcoded value is $govuk-brand-blue if rebrand, otherwise govuk-colour("black") -#}
+{% set themeColor = themeColor | default("#1d70b8" if _rebrand else "#0b0c0c", true) -%}
+{% set assetPath = assetPath or "/assets" -%}
+{% set assetRebrandPath = assetRebrandPath | default("/assets/rebrand" if _rebrand else assetPath, true) -%}
+
+<!DOCTYPE html>
+<html lang="{{ t.htmlLang | default("en", true) }}" class="govuk-template {%- if _rebrand %} govuk-template--rebranded{% endif %} {%- if htmlClasses %} {{ htmlClasses }}{% endif %}">
+  <head>
+    <meta charset="utf-8">
+    <title lang="{{ currentLang }}">{% block pageTitle %}{{ t.pageTitle }}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="{{ themeColor }}">
+
+    {% block headIcons %}
+      <link rel="icon" sizes="48x48" href="{{ assetRebrandPath }}/images/favicon.ico">
+      <link rel="icon" sizes="any" href="{{ assetRebrandPath }}/images/favicon.svg" type="image/svg+xml">
+      <link rel="shortcut icon" href="{{ assetRebrandPath }}/images/favicon.ico" type="image/x-icon" />
+      <link rel="mask-icon" href="{{ assetRebrandPath }}/images/govuk-icon-mask.svg" color="{{ themeColor }}">
+      <link rel="apple-touch-icon" href="{{ assetRebrandPath }}/images/govuk-icon-180.png">
+      <link rel="manifest" href="{{ assetRebrandPath }}/manifest.json">
+    {% endblock %}
+
+    <link rel="stylesheet" href="{{ assetPath }}/css/govuk-frontend.min.css">
+    {% block head %}{% endblock %}
+
+    {#- OpenGraph images needs to be absolute, so we need either a URL for the image or for assetUrl to be set #}
+    <meta property="og:image" content="https://www.vehicle-operator-licensing.service.gov.uk{{ assetRebrandPath }}/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body {%- if bodyClasses %} {{ bodyClasses }}{% endif %}" {{- govukAttributes(bodyAttributes) }}>
+    <script {%- if cspNonce %} nonce="{{ cspNonce }}"{% endif %}>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+    {% block bodyStart %}{% endblock %}
+
+    {% block skipLink %}
+      {{ govukSkipLink({
+        href: '#main-content',
+        text: t.skipLink
+      }) }}
+    {% endblock %}
+
+    {% block header %}
+      {{ govukHeader({
+        rebrand: _rebrand,
+        homepageUrl: 'https://www.gov.uk'
+      }) }}
+    {% endblock %}
+
+    {% block beforeMain %}
+        {% set altUrl = languageToggleUrl(page, t.htmlLang | default("en", true), t) %}
+        {{ govukServiceNavigation({
+          serviceName: t.serviceName,
+          serviceUrl: t.serviceUrl,
+          navigation: [
+            {
+              href: altUrl,
+              text: t.navigation.languageToggle
+            }
+          ]
+        }) }}
+    {% endblock %}
+
+    {% block main %}
+     
+    {% endblock %}
+
+    {% block footer %}
+      {{ govukFooter({
+        rebrand: _rebrand,
+        "meta": {
+          "items": [
+            
+            {
+              "href": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency/about/personal-information-charter",
+              "text": t.footer.privacy
+            }
+          ]
+        },
+        contentLicence: {
+          html: t.footer.licenceDescription
+        },
+        copyright: {
+          html: t.footer.copyrightLogo
+        }
+      }) }}
+    {% endblock %}
+
+    {% block bodyEnd %}
+      <script src="{{ assetPath }}/js/all.bundle.js"></script>
+      <script>
+        window.GOVUKFrontend.initAll()
+      </script>
+    {% endblock %}
+  </body>
+</html>

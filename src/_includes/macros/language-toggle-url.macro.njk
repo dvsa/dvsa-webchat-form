@@ -1,0 +1,6 @@
+{# Macro to compute the language toggle URL #}
+{% macro languageToggleUrl(page, currentLang, t) %}
+  {% set altLang = t.alternativeLang %}
+  {% set altUrl = page.url.replace('/' + currentLang + '/', '/' + altLang + '/') %}
+  {{ altUrl }}
+{% endmacro %}

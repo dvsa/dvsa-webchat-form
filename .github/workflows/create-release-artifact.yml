@@ -1,0 +1,55 @@
+name: Create Release Artifact
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    uses: dvsa/.github/.github/workflows/nodejs-build.yaml@v4.1.1
+    with:
+      node-version: '22.x'
+      build-command: npm run build
+      build-folder: _site
+      build-folder-path: _site
+      upload-artifact: true
+
+  attach-artifact-to-release:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACT_NAME: _site
+      DOWNLOAD_PATH: ./release_site_build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ env.DOWNLOAD_PATH }}
+
+      - name: Generate File Name
+        id: generate_file_name
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          FORMATTED_TAG=$(echo "$TAG_NAME" | sed 's/\./\-/g')
+          RELEASE_ARTIFACT_FILE_NAME="vol-maintenance-page_${FORMATTED_TAG}.zip"
+          echo "FORMATTED_TAG=$FORMATTED_TAG" >> $GITHUB_ENV
+          echo "RELEASE_ARTIFACT_FILE_NAME=$RELEASE_ARTIFACT_FILE_NAME" >> $GITHUB_ENV
+
+      - name: Zip the artifact
+        working-directory: ${{ env.DOWNLOAD_PATH }}
+        run: zip -r ../${{ env.RELEASE_ARTIFACT_FILE_NAME }} .
+
+      - name: Install GitHub CLI
+        uses: actions/setup-go@v3
+        with:
+          go-version: '1.x'
+
+      - name: Upload Release Asset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} ${{ env.RELEASE_ARTIFACT_FILE_NAME }} --repo ${{ github.repository }}

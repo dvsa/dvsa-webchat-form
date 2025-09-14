@@ -1,0 +1,36 @@
+{% from "macros/chat-url.macro.njk" import chatUrl %}
+<div class="govuk-width-container">
+  <form action="{{ chatUrl(page, currentLang, urls) }}" method="GET" class="govuk-form">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      {% call govukFieldset({ legend: { text: t.chatHeading, classes:
+      "govuk-fieldset__legend--l", isPageHeading: true } }) %}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukWarningText({ text: t.warningText, iconFallbackText: "Warning"
+          }) }}
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukInput({ label: { text: t.fullName }, id: "full-name", name:
+          "name", autocomplete: "name", spellcheck: false }) }}
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukInput({ label: { text: t.email }, hint: { text: t.emailHint }, id: "email", name: "im_email",
+          type: "email", autocomplete: "email", spellcheck: false }) }}
+        </div>
+         {{ govukInput({ id: "template", name: "im_emailTemplate", value : "3988" ,
+          type: "hidden" }) }}
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          {{ govukButton({ text: t.formButton, type: "submit", isStartButton: true })
+          }}
+        </div>
+      </div>
+      {% endcall %}
+    </main>
+  </form>
+</div>

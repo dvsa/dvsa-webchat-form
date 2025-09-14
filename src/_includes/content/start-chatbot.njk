@@ -1,0 +1,28 @@
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">{{t.mainHeading}}</h1>
+        <h2 class="govuk-heading-l">{{t.openingHoursHeading}}</h2>
+        <p class="govuk-body">{{t.openingHoursChatBot | safe }}</p>
+        <h2 class="govuk-heading-l">{{t.beforeYouStartHeading}}</h2>
+        <p class="govuk-body">{{t.beforeYouStartTextChatBot | safe }}</p>
+        <p class="govuk-body">{{t.paymentText }}</p>
+        <p class="govuk-body">
+          {{ govukButton({ text: t.startChatBot, href:"../../" + currentLang + "/" + context , isStartButton: true })
+          }}
+        </p>
+        <p class="govuk-body">
+          {{ t.advisorTextChatBot | safe }}
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li class="govuk-list__item">{{ t.serviceCentreOpeningHoursItem1 }}</li>
+          <li class="govuk-list__item">{{ t.serviceCentreOpeningHoursItem2 }}</li>
+        </ul>
+        <p class="govuk-body">
+          {{ t.additionalLinkTextChatBot | safe }}
+        </p>
+      </div>
+    </div>
+  </main>
+</div>

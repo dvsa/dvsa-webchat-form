@@ -1,0 +1,88 @@
+{
+  "en": {
+    "lang": "en",
+    "langName": "English",
+    "mainHeading": "DVSA Webchat",
+    "alternativeLang": "cy",
+    "alternativeLangName": "Cymraeg",
+    "openingHoursHeading": "Webchat opening Hours",
+    "openingHoursText": "Monday to Friday, 8am to 5pm <br /> Weekends and bank holidays. Closed.",
+    "openingHoursChatBot": "Monday to Friday, 8am to 4pm <br /> Public holidays. Closed.",
+
+    "htmlLang": "en",
+    "email": "Email address",
+    "fullName": "Full name",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailHint":"We’ll only use this to send you a transcript",
+    "chatHeading":"Enter your details",
+    "beforeYouStartHeading": "Before you start",
+    "start": "Start now",
+    "startChatBot": "Start chat",
+    "beforeYouStartText": "You can save a copy of your chat by selecting 'Yes' to the prompt at the end of the chat.",
+    "beforeYouStartTextChatBot": "If you're using the chatbot during opening hours and it is unable to help,one of our advisors can step in.<br />If you are happy to continue, please click Start now.<br />You can keep a transcript of your chat by clicking the 'Save Chat' button in the top left of the chat screen.",
+    "paymentText": "You cannot use webchat to make a payment to DVSA.",
+    "advisorTextChatBot": "If there are no advisors available, you can call our contact centre on: 0300 123 9000",
+    "serviceCentreOpeningHoursItem1": "Monday to Friday, 7:30am to 6pm",
+    "serviceCentreOpeningHoursItem2": "Public holidays. Closed.",
+    "additionalLinkTextChatBot": "You can also find more information at <a class=\"govuk-link\" href=\"https://www.gov.uk/contact-dvsa/y/mot-vehicle-tests-and-approval/mot-or-other-vehicle-tests\"> MOT and vehicle testing enquiries</a>.",
+    "serviceName": "Contact the DVSA",
+    "pageTitle": "Contact the DVSA",
+    "insetText": "<span>DVSA driving test enquiries</span><br><a href='mailto:customerservices@dvsa.gov.uk'>customerservices@dvsa.gov.uk</a><br> Telephone: 0300 200 1122<br> Monday to Friday, 8am to 4pm<br> <a href='https://www.gov.uk/call-charges'>Find out about call charges</a>",
+    "warningText":"Data stored during web chat sessions will not be shared with third parties.",
+    "formButton": "Start chat",
+    "metaDescription": "",
+    "skipLink": "Skip to main content",
+     "navigation": {
+      "languageToggle": "Cymraeg"
+    },
+    "footer": {
+      "copyrightLogo": "© Crown copyright",
+      "licenceDescription": "All content is available under the <a class=\"govuk-footer__link\" href=\"https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/\" rel=\"license\">Open Government Licence v3.0</a>, except where otherwise stated",
+      "privacy":"Personal Information Charter"
+    }
+  },
+  "cy": {
+    "lang": "cy",
+    "langName": "Cymraeg",
+    "alternativeLang": "en",
+    "alternativeLangName": "English",
+    "mainHeading": "Chat web de DVSA",
+    "chatHeading": "Rhowch eich manylion",
+    "email": "Cyfeiriad e-bost",
+    "fullName": "Enw llawn",
+    "firstName": "Enw cyntaf",
+    "lastName": "Cyfenw",
+    "emailHint": "Dim ond i anfon trawsgrifiad atoch y byddwn yn ei ddefnyddio",
+    "openingHours": "Oriau agor webchat",
+    "openingHoursHeading": "Cyn i chi ddechrau",
+    "openingHoursText": "Gallwch arbed copi o'ch sgwrs trwy ddewis 'Ydw' i'r daith ar ddiwedd y sgwrs. <br /> Ni allwch ddefnyddio webchat i wneud taliadau i DVSA.",
+    "openingHoursChatBot":" Dydd Llun i Dydd Gwener, 8am i 4pm <br /> Gwyliau cyhoeddus. Wedi cau.",
+    "beforeYouStartTextChatBot":"Os ydych yn defnyddio'r bot sgwrsio yn ystod oriau agor ac nad yw'n gallu helpu, gall un o'n cynghorwyr ymyrryd.<br /> Os ydych yn fodlon parhau, cliciwch 'Dechrau nawr'.<br /> Gallwch gadw trawsgrifiad o'ch sgwrs trwy glicio'r botwm 'Cadw Sgwrs' yng nghornel chwith uchaf sgrin y sgwrs.",
+    "startChatBot": "Dechrau sgwrs",
+    "serviceCentreOpeningHoursItem1": "Dydd Llun i Dydd Gwener, 7:30am i 6pm",
+    "serviceCentreOpeningHoursItem2": "Gwyliau cyhoeddus. Wedi cau.",
+    "additionalLinkTextChatBot": "Gallwch hefyd ddod o hyd i fwy o wybodaeth yn <a class=\"govuk-link\" href=\"https://www.gov.uk/contact-dvsa/y/mot-vehicle-tests-and-approval/mot-or-other-vehicle-tests\"> Ymholiadau am MOT a phrofion cerbydau</a>.",
+    "warningText": "Ni fydd data sy'n cael ei storio yn ystod sesiynau sgwrsio ar-lein yn cael ei rannu â thrydydd partïon.",
+    "htmlLang": "cy",
+    "beforeYouStartHeading": "Cyn i chi ddechrau",
+    "beforeYouStartText": "Gallwch arbed copi o'ch sgwrs trwy ddewis 'Ydw' i'r daith ar ddiwedd y sgwrs.",
+    "paymentText": "Ni allwch ddefnyddio webchat i wneud taliadau i DVSA.",
+    "insetText": "<span>Ymholiadau arholiadau gyrrwr DVSA</span><br><a href='mailto:customerservices@dvsa.gov.uk'>customerservices@dvsa.gov.uk</a><br> Ffôn: 0300 200 1122<br> Dydd Llun i Dydd Gwener, 8am i 4pm<br> <a href='https://www.gov.uk/call-charges'>Dysgwch am dâl galwadau  </a>",
+    "warningtext":"Ni fydd data sy'n cael ei storio yn ystod sesiynau sgwrsio ar-lein yn cael ei rannu â thrydydd partïon.",
+    "formButton": "Dechrau sgwrs",
+    "serviceName": "Cysylltu â DVSA",
+    "pageTitle": "Cysylltu â DVSA",
+    "start": "Dechrau nawr",
+    "skipLink": "Neidio i'r prif gynnwys",
+    "metaDescription": "",
+    "navigation": {
+      "languageToggle": "English"
+    },
+    "footer": {
+      "copyrightLogo": "© Hawlfraint y Goron",
+      "licenceDescription": "Mae'r holl gynnwys ar gael o dan <a class=\"govuk-footer__link\" href=\"https://www.nationalarchives.gov.uk/doc/open-government-licence-cymraeg/version/3/\" rel=\"license\">Trwydded Llywodraeth Agored v3.0</a> heblaw am lle nodir yn wahanol",
+      "privacy":"Cynllun Gwybodaeth Bersonol"
+    }
+  }
+}
