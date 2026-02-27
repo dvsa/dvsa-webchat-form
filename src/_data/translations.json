@@ -13,7 +13,7 @@
     "email": "Email address",
     "fullName": "Full name",
     "firstName": "First name",
-    "lastName": "Last name",
+    "lastName": "Full name",
     "emailHint":"We’ll only use this to send you a transcript",
     "chatHeading":"Enter your details",
     "beforeYouStartHeading": "Before you start",
